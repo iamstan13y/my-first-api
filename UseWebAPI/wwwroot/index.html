@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#myButton").click(function () {
+                $.ajax({
+                    url: 'http://localhost:48359/api/first',
+                    type: 'GET',
+                    crossDomain: true,
+                    success: function (result) {
+                        console.log(result);
+                    }
+                });
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>Shit!</h1>
+    <input type="button" id="myButton" value="Click Me"/>
+</body>
+</html>
